@@ -97,17 +97,17 @@ const Hero = () => {
                   }}
                 >
                   <img
-                    src={${process.env.PUBLIC_URL}/images/profile.png}
-                    alt="Amal Gopakumar profile"
-                    className="rounded-circle"
-                    style={{
-                      width: '240px',
-                      height: '240px',
-                      objectFit: 'cover',
-                      border: '3px solid rgba(255, 255, 255, 0.2)',
-                      boxShadow: '0 12px 40px rgba(0,0,0,0.2)'
-                    }}
-                  />
+                        src="/images/profile.png"
+                        alt="Amal Gopakumar profile"
+                        className="rounded-circle"
+                        style={{
+                          width: '240px',
+                          height: '240px',
+                          objectFit: 'cover',
+                          border: '3px solid rgba(255, 255, 255, 0.2)',
+                          boxShadow: '0 12px 40px rgba(0, 0, 0, 0.2)',
+                        }}
+                      />
                 </div>
 
                 {/* Floating Data-Analyst Icons */}
