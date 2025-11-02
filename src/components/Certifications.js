@@ -1,123 +1,99 @@
-import React from 'react';
+import React from "react";
 
 const Certifications = () => {
   const certifications = [
     {
-      title: "Data Analytics Job Simulation",
+      title: "Python for Data Science",
+      issuer: "IBM SkillsBuild",
+      type: "Certification",
+      category: "Programming",
+      description: "Completed industry-aligned training focused on Python, data handling, data structures, statistical analysis, and visualization for analytics applications."
+    },
+    {
+      title: "Python for Data Science & AI",
+      issuer: "Microsoft",
+      type: "Certification",
+      category: "Programming",
+      description: "Learned Python fundamentals, data analytics workflows, and introduction to AI techniques used in business environments."
+    },
+    {
+      title: "Intermediate SQL",
+      issuer: "Datacamp",
+      type: "Certification",
+      category: "Data Analytics",
+      description: "Gained hands-on experience in SQL joins, filtering, data aggregation, sub-queries, and real-world analytical SQL scenarios."
+    },
+    {
+      title: "Data Analytics Virtual Internship",
       issuer: "Deloitte Australia",
       type: "Job Simulation",
       category: "Data Analytics",
-      description: "Comprehensive simulation covering real-world data analytics scenarios and business intelligence solutions."
+      description: "Performed data cleaning, dashboard building, and business insights tasks simulating real client-analytics problems."
     },
     {
-      title: "Data Analytics Job Simulation",
+      title: "Data Analytics Virtual Internship",
       issuer: "TATA India",
       type: "Job Simulation",
       category: "Data Analytics",
-      description: "Industry-focused simulation program covering advanced data analytics techniques and business applications."
+      description: "Completed data interpretation and visualization tasks for real-world case-based analytics training."
     },
     {
       title: "Employability Skills Training",
       issuer: "Mahindra Pride Classroom & Naandi Foundation",
-      type: "Skills Training",
+      type: "Professional Training",
       category: "Professional Development",
-      description: "Comprehensive training program focusing on professional skills and workplace readiness."
-    },
-    {
-      title: "Python for Data Science",
-      issuer: "NPTEL",
-      type: "Certification",
-      category: "Programming",
-      description: "Specialized certification in Python programming for data science applications and analytics.",
-      date: "January 2024"
-    },
-    {
-      title: "Artificial Intelligence Fundamentals",
-      issuer: "IBM SkillsBuild",
-      type: "Certification",
-      category: "Artificial Intelligence",
-      description: "Foundational certification covering AI principles, machine learning, and artificial intelligence applications.",
-      date: "October 2024"
+      description: "Completed professional development training focused on communication, teamwork, discipline, and workplace readiness."
     }
   ];
 
-  const getCategoryColor = (category) => {
-    switch (category) {
-      case 'Data Analytics':
-        return 'bg-primary';
-      case 'Professional Development':
-        return 'bg-success';
-      case 'Programming':
-        return 'bg-warning';
-      case 'Artificial Intelligence':
-        return 'bg-info';
-      default:
-        return 'bg-secondary';
-    }
-  };
-
-  // Define a gradient style that is suitable for modern, professional portfolios.
-  // This can be adjusted to match your site's UI colors if needed.
-  const gradientBackground = {
-    background: "linear-gradient(135deg, #f8fafc 0%, #e0e7ff 50%, #dbeafe 100%)",
-    minHeight: "100vh",
-    paddingTop: "40px",
-    paddingBottom: "40px"
+  const categoryColors = {
+    "Data Analytics": "bg-primary",
+    "Professional Development": "bg-success",
+    Programming: "bg-warning",
   };
 
   return (
-    <section
-      id="certifications"
-      className="section section-middle"
-    >
+    <section id="certifications" className="section section-middle">
       <div className="container">
-        <div className="row">
+
+        <div className="row mb-4 text-center">
           <div className="col-lg-12">
             <h2 className="section-title" data-aos="fade-up">
               Certifications & Training
             </h2>
-            <p className="text-center mb-5" data-aos="fade-up" data-aos-delay="200">
-              Professional certifications and training programs that demonstrate my commitment 
-              to continuous learning and industry expertise.
+            <p className="text-muted" data-aos="fade-up" data-aos-delay="100">
+              Verified learning programs and industry-recognized certifications strengthening my data analytics foundation.
             </p>
           </div>
         </div>
-        
+
         <div className="row">
-          {certifications.map((cert, index) => (
-            <div key={index} className="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay={index * 100}>
-              <div className="certification-item">
-                <div className="certification-header">
-                  <h5 className="certification-title">{cert.title}</h5>
-                  <span className={`badge ${getCategoryColor(cert.category)} mb-2`}>
+          {certifications.map((cert, i) => (
+            <div key={i} className="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay={i * 100}>
+              <div className="p-4 border rounded shadow-sm bg-white h-100">
+                <div className="d-flex justify-content-between mb-2">
+                  <h5 className="fw-bold">{cert.title}</h5>
+                  <span className={`badge ${categoryColors[cert.category] || "bg-secondary"}`}>
                     {cert.category}
                   </span>
                 </div>
-                <div className="certification-details">
-                  <p className="certification-issuer mb-2">
-                    <i className="fas fa-building me-2"></i>
-                    <strong>Issuer:</strong> {cert.issuer}
-                  </p>
-                  <p className="certification-type mb-2">
-                    <i className="fas fa-certificate me-2"></i>
-                    <strong>Type:</strong> {cert.type}
-                  </p>
-                  {cert.date && (
-                    <p className="certification-date mb-2">
-                      <i className="fas fa-calendar me-2"></i>
-                      <strong>Completed:</strong> {cert.date}
-                    </p>
-                  )}
-                  <p className="certification-description">
-                    {cert.description}
-                  </p>
-                </div>
+
+                <p className="mb-2">
+                  <i className="fas fa-building me-2"></i> 
+                  <strong>Issuer:</strong> {cert.issuer}
+                </p>
+
+                <p className="mb-2">
+                  <i className="fas fa-certificate me-2"></i>
+                  <strong>Type:</strong> {cert.type}
+                </p>
+
+                <p className="text-muted">{cert.description}</p>
               </div>
             </div>
           ))}
         </div>
-        
-        
+
       </div>
     </section>
   );

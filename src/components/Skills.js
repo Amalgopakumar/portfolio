@@ -6,63 +6,56 @@ const Skills = () => {
       title: "Programming & Libraries",
       icon: "fas fa-code",
       skills: [
-        "Python", "NumPy", "Pandas", "Scikit-learn", "TensorFlow"
+        "Python", "Pandas", "NumPy", "Matplotlib", "Seaborn"
+      ]
+    },
+    {
+      title: "Data Analytics & BI",
+      icon: "fas fa-chart-pie",
+      skills: [
+        "Power BI", "Excel", "DAX", "Data Modelling", "Business Analytics"
       ]
     },
     {
       title: "Machine Learning",
       icon: "fas fa-brain",
       skills: [
-        "Classification", "Regression", "Ensemble Methods", "Deep Learning", "CNN – VGG16", "Image Analytics"
+        "Classification", "Regression", "Feature Engineering", "EDA"
       ]
     },
     {
-      title: "Data Processing",
-      icon: "fas fa-database",
-      skills: [
-        "Data Preprocessing", "Feature Engineering", "Feature Scaling", "OpenCV"
-      ]
-    },
-    {
-      title: "Statistical Analysis",
+      title: "Statistical Methods",
       icon: "fas fa-chart-line",
       skills: [
-        "Hypothesis Testing", "ANOVA", "Chi-Squared", "Time Series Analysis"
+        "Hypothesis Testing", "ANOVA", "Chi-Square Test", "Data Interpretation"
       ]
     },
     {
-      title: "Model Evaluation",
-      icon: "fas fa-trophy",
+      title: "Databases & Backend",
+      icon: "fas fa-database",
       skills: [
-        "ROC-AUC", "Precision", "Recall", "F1-Score", "Confusion Matrix"
+        "SQL", "MySQL", "Data Cleaning", "Flask API"
       ]
     },
     {
-      title: "Data Visualization",
-      icon: "fas fa-chart-bar",
+      title: "Automation / Apps",
+      icon: "fas fa-robot",
       skills: [
-        "Matplotlib", "Seaborn", "Power BI", "Excel"
+        "Streamlit", "Dialogflow", "Chatbot Development"
       ]
     },
     {
-      title: "Database & Analytics",
-      icon: "fas fa-server",
-      skills: [
-        "SQL", "Data Extraction", "Data Cleaning"
-      ]
-    },
-    {
-      title: "NLP & Text Mining",
-      icon: "fas fa-language",
-      skills: [
-        "Spam Detection", "Text Classification", "Naive Bayes"
-      ]
-    },
-    {
-      title: "Deployment & Pipeline",
+      title: "Model Deployment & Tools",
       icon: "fas fa-rocket",
       skills: [
-        "Model Deployment", "Pipeline Development", "Pickle", "Streamlit"
+        "Pickle", "Pipeline Deployment", "Version Control (Git/GitHub)"
+      ]
+    },
+    {
+      title: "Soft Skills",
+      icon: "fas fa-user-check",
+      skills: [
+        "Problem Solving", "Communication", "Team Collaboration"
       ]
     }
   ];
@@ -76,8 +69,7 @@ const Skills = () => {
               Core Skills & Technologies
             </h2>
             <p className="text-center mb-5" data-aos="fade-up" data-aos-delay="200">
-              A comprehensive overview of my technical expertise across data science, 
-              machine learning, and software development domains.
+              Technical expertise in data analytics, machine learning, and business intelligence tools.
             </p>
           </div>
         </div>
@@ -100,73 +92,77 @@ const Skills = () => {
             </div>
           ))}
         </div>
-        
+
+        {/* Skill bars */}
         <div className="row mt-5">
           <div className="col-lg-12" data-aos="fade-up">
             <div className="skills-summary">
               <h4 className="text-center mb-4">Skills Proficiency Overview</h4>
               <div className="row">
+                
                 <div className="col-lg-6 mb-4">
                   <div className="proficiency-section">
                     <h5 className="text-primary mb-3">
                       <i className="fas fa-laptop-code me-2"></i>
-                      Programming Languages
+                      Programming & Querying
                     </h5>
                     <div className="skill-bar-container">
                       <div className="skill-bar-item">
                         <div className="d-flex justify-content-between">
                           <span>Python</span>
-                          <span>60%</span>
+                          <span>70%</span>
                         </div>
                         <div className="progress">
-                          <div className="progress-bar" style={{width: '60%'}}></div>
+                          <div className="progress-bar" style={{width: '70%'}}></div>
                         </div>
                       </div>
                       <div className="skill-bar-item">
                         <div className="d-flex justify-content-between">
                           <span>SQL</span>
-                          <span>50%</span>
+                          <span>65%</span>
                         </div>
                         <div className="progress">
-                          <div className="progress-bar" style={{width: '50%'}}></div>
+                          <div className="progress-bar" style={{width: '65%'}}></div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+
                 <div className="col-lg-6 mb-4">
                   <div className="proficiency-section">
                     <h5 className="text-primary mb-3">
-                      <i className="fas fa-brain me-2"></i>
-                      Machine Learning
+                      <i className="fas fa-chart-bar me-2"></i>
+                      BI & Analytics
                     </h5>
                     <div className="skill-bar-container">
                       <div className="skill-bar-item">
                         <div className="d-flex justify-content-between">
-                          <span>Scikit-learn</span>
-                          <span>30%</span>
+                          <span>Power BI</span>
+                          <span>80%</span>
                         </div>
                         <div className="progress">
-                          <div className="progress-bar" style={{width: '30%'}}></div>
+                          <div className="progress-bar" style={{width: '80%'}}></div>
                         </div>
                       </div>
                       <div className="skill-bar-item">
                         <div className="d-flex justify-content-between">
-                          <span>TensorFlow</span>
-                          <span>30%</span>
+                          <span>Excel</span>
+                          <span>85%</span>
                         </div>
                         <div className="progress">
-                          <div className="progress-bar" style={{width: '30%'}}></div>
+                          <div className="progress-bar" style={{width: '85%'}}></div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+                
               </div>
             </div>
           </div>
         </div>
-        
+
       </div>
     </section>
   );

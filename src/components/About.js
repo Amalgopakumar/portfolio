@@ -4,6 +4,7 @@ const About = () => {
   return (
     <section id="about" className="section section-middle">
       <div className="container">
+        
         <div className="row">
           <div className="col-lg-12">
             <h2 className="section-title" data-aos="fade-up">
@@ -13,71 +14,76 @@ const About = () => {
         </div>
         
         <div className="row align-items-center">
+          
+          {/* About Content */}
           <div className="col-lg-6" data-aos="fade-right">
             <div className="about-content">
-              <h3 className="mb-4">Professional Objective</h3>
+              <h3 className="mb-4">Professional Summary</h3>
               <p className="lead mb-4">
-                I am a passionate Data Science and Machine Learning professional with expertise in 
-                developing end-to-end ML solutions that drive business value. My goal is to leverage 
-                advanced analytics and cutting-edge AI technologies to solve complex business problems 
-                and create impactful solutions.
+                Aspiring Data Analyst with strong skills in SQL, Python, Power BI, and Excel.
+                Skilled in data cleaning, exploratory analysis, and building dashboards to uncover insights
+                and support data-driven decision making. Passionate about turning complex datasets into
+                meaningful business insights.
               </p>
               
               <div className="about-highlights">
                 <div className="highlight-item">
-                  <i className="fas fa-bullseye text-primary me-3"></i>
-                  <span>Focus on delivering measurable business impact through data-driven solutions</span>
+                  <i className="fas fa-database text-primary me-3"></i>
+                  <span>Strong foundation in SQL & relational databases</span>
                 </div>
                 <div className="highlight-item">
-                  <i className="fas fa-rocket text-primary me-3"></i>
-                  <span>Specialized in ensemble methods and deep learning applications</span>
+                  <i className="fas fa-chart-line text-primary me-3"></i>
+                  <span>Hands-on experience building dashboards in Power BI</span>
                 </div>
                 <div className="highlight-item">
-                  <i className="fas fa-chart-bar text-primary me-3"></i>
-                  <span>Expertise in statistical analysis and hypothesis testing</span>
+                  <i className="fas fa-code text-primary me-3"></i>
+                  <span>Python for data cleaning, EDA & visualization</span>
                 </div>
                 <div className="highlight-item">
-                  <i className="fas fa-cogs text-primary me-3"></i>
-                  <span>Experience in model deployment and production pipelines</span>
+                  <i className="fas fa-file-excel text-primary me-3"></i>
+                  <span>Advanced Excel (Pivot tables, Lookups, Charts)</span>
                 </div>
               </div>
             </div>
           </div>
           
+          {/* Stats */}
           <div className="col-lg-6" data-aos="fade-left">
             <div className="about-stats">
               <div className="row">
                 <div className="col-6 mb-4">
                   <div className="stat-card text-center">
-                    <div className="stat-number">88%</div>
-                    <div className="stat-label">ROC-AUC Score</div>
+                    <div className="stat-number">20+</div>
+                    <div className="stat-label">Dashboards & Reports</div>
                   </div>
                 </div>
                 <div className="col-6 mb-4">
                   <div className="stat-card text-center">
-                    <div className="stat-number">98%</div>
-                    <div className="stat-label">Classification Accuracy</div>
+                    <div className="stat-number">15+</div>
+                    <div className="stat-label">Data Projects</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
         </div>
-        
+
+        {/* Passion Section */}
         <div className="row mt-5">
           <div className="col-lg-12" data-aos="fade-up">
             <div className="about-passion">
-              <h4 className="text-center mb-4">What Drives Me</h4>
+              <h4 className="text-center mb-4">My Passion</h4>
               <p className="text-center lead">
-                I believe in the transformative power of data and artificial intelligence. 
-                My passion lies in creating intelligent systems that not only solve technical 
-                challenges but also create real-world value. From predicting customer churn 
-                to building healthcare diagnostic tools, I thrive on turning complex data 
-                into actionable insights that make a difference.
+                I love working with data to solve real-world problems — whether it's analyzing business 
+                performance, identifying trends, or building automation and reporting systems that help 
+                teams work smarter. My goal is to build a career creating meaningful insights and turning 
+                data into decisions.
               </p>
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );
