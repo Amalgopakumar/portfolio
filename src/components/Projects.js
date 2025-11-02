@@ -106,8 +106,22 @@ const Projects = () => {
 
                   <div className="project-links mb-3">
                     <div className="d-flex gap-2">
-                      <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="btn btn-outline-dark btn-sm">
-                        <i className="fab fa-github me-1"></i> GitHub
+                      <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="bbg-black text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-gray-900 transition"
+                        style={{
+                            border: "1.5px solid rgba(255,255,255,0.3)",
+                            background: "rgba(120,119,198,0.12)",
+                            backdropFilter: "blur(8px)",
+                            borderRadius: "12px",
+                            padding: "8px 14px",
+                            color: "#fff",
+                            fontWeight: "600"
+                          }}>
+                            <img 
+                                src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg"
+                                alt="GitHub"
+                                style={{ width: "20px", height: "20px", filter: "invert(100%)", marginRight: "8px" }}
+                              />
+                              GitHub
                       </a>
                       <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">
                         <i className="fas fa-external-link-alt me-1"></i> Live Demo
