@@ -97,7 +97,7 @@ const Hero = () => {
                   }}
                 >
                   <img
-                    src="/images/profile.png"
+                    src="public/images/profile.png"
                     alt="Amal Gopakumar profile"
                     className="rounded-circle"
                     style={{
