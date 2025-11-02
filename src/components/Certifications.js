@@ -22,27 +22,6 @@ const Certifications = () => {
       type: "Certification",
       category: "Data Analytics",
       description: "Gained hands-on experience in SQL joins, filtering, data aggregation, sub-queries, and real-world analytical SQL scenarios."
-    },
-    {
-      title: "Data Analytics Virtual Internship",
-      issuer: "Deloitte Australia",
-      type: "Job Simulation",
-      category: "Data Analytics",
-      description: "Performed data cleaning, dashboard building, and business insights tasks simulating real client-analytics problems."
-    },
-    {
-      title: "Data Analytics Virtual Internship",
-      issuer: "TATA India",
-      type: "Job Simulation",
-      category: "Data Analytics",
-      description: "Completed data interpretation and visualization tasks for real-world case-based analytics training."
-    },
-    {
-      title: "Employability Skills Training",
-      issuer: "Mahindra Pride Classroom & Naandi Foundation",
-      type: "Professional Training",
-      category: "Professional Development",
-      description: "Completed professional development training focused on communication, teamwork, discipline, and workplace readiness."
     }
   ];
 

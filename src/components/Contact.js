@@ -47,7 +47,7 @@ const Contact = () => {
                     <i className="fas fa-envelope" style={iconStyle}></i>
                     <div>
                       <h5 style={titleStyle}>Email</h5>
-                      <p style={textStyle}>amalgopakumar@gmail.com</p>
+                      <p style={textStyle}>amalgopakumar5@gmail.com</p>
                     </div>
                   </div>
                 </div>
@@ -109,7 +109,7 @@ const Contact = () => {
             <div className="contact-buttons">
 
               {/* Email Button */}
-              <a href="mailto:amalgopakumar@gmail.com" className="btn btn-lg me-3 mb-3"
+              <a href="mailto:amalgopakumar5@gmail.com" className="btn btn-lg me-3 mb-3"
                 style={primaryBtnStyle}>
                 <i className="fas fa-envelope me-2"></i> Send Email
               </a>

@@ -29,7 +29,7 @@ const Hero = () => {
                   }}
                 >
                   <i className="fas fa-chart-line me-2"></i>
-                  Aspiring Data Analyst
+                  Data Analyst
                 </span>
               </div>
 
@@ -97,7 +97,7 @@ const Hero = () => {
                   }}
                 >
                   <img
-                        src="/images/profile.png"
+                        src={`${process.env.PUBLIC_URL}/images/profile.png`}
                         alt="Amal Gopakumar profile"
                         className="rounded-circle"
                         style={{

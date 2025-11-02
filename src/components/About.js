@@ -53,13 +53,13 @@ const About = () => {
               <div className="row">
                 <div className="col-6 mb-4">
                   <div className="stat-card text-center">
-                    <div className="stat-number">20+</div>
+                    <div className="stat-number">10+</div>
                     <div className="stat-label">Dashboards & Reports</div>
                   </div>
                 </div>
                 <div className="col-6 mb-4">
                   <div className="stat-card text-center">
-                    <div className="stat-number">15+</div>
+                    <div className="stat-number">10+</div>
                     <div className="stat-label">Data Projects</div>
                   </div>
                 </div>

@@ -17,13 +17,6 @@ const Skills = () => {
       ]
     },
     {
-      title: "Machine Learning",
-      icon: "fas fa-brain",
-      skills: [
-        "Classification", "Regression", "Feature Engineering", "EDA"
-      ]
-    },
-    {
       title: "Statistical Methods",
       icon: "fas fa-chart-line",
       skills: [
@@ -31,24 +24,17 @@ const Skills = () => {
       ]
     },
     {
-      title: "Databases & Backend",
+      title: "Databases",
       icon: "fas fa-database",
       skills: [
-        "SQL", "MySQL", "Data Cleaning", "Flask API"
+        "SQL", "MySQL", "Data Cleaning"
       ]
     },
     {
       title: "Automation / Apps",
       icon: "fas fa-robot",
       skills: [
-        "Streamlit", "Dialogflow", "Chatbot Development"
-      ]
-    },
-    {
-      title: "Model Deployment & Tools",
-      icon: "fas fa-rocket",
-      skills: [
-        "Pickle", "Pipeline Deployment", "Version Control (Git/GitHub)"
+        "n8n", "Dialogflow", "Chatbot Development"
       ]
     },
     {
@@ -69,7 +55,7 @@ const Skills = () => {
               Core Skills & Technologies
             </h2>
             <p className="text-center mb-5" data-aos="fade-up" data-aos-delay="200">
-              Technical expertise in data analytics, machine learning, and business intelligence tools.
+              Technical expertise in data analytics and business intelligence tools.
             </p>
           </div>
         </div>
@@ -119,7 +105,7 @@ const Skills = () => {
                       <div className="skill-bar-item">
                         <div className="d-flex justify-content-between">
                           <span>SQL</span>
-                          <span>65%</span>
+                          <span>90%</span>
                         </div>
                         <div className="progress">
                           <div className="progress-bar" style={{width: '65%'}}></div>
@@ -139,7 +125,7 @@ const Skills = () => {
                       <div className="skill-bar-item">
                         <div className="d-flex justify-content-between">
                           <span>Power BI</span>
-                          <span>80%</span>
+                          <span>90%</span>
                         </div>
                         <div className="progress">
                           <div className="progress-bar" style={{width: '80%'}}></div>
