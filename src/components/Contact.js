@@ -1,134 +1,135 @@
 import React from 'react';
 
+const contactItems = [
+  {
+    icon: 'fas fa-envelope',
+    label: 'Email',
+    value: 'amalgopakumar5@gmail.com',
+    href: 'mailto:amalgopakumar5@gmail.com',
+  },
+  {
+    icon: 'fas fa-phone',
+    label: 'Phone',
+    value: '+91 77368 99481',
+    href: 'tel:+917736899481',
+  },
+  {
+    icon: 'fas fa-map-marker-alt',
+    label: 'Location',
+    value: 'Palakkad, Kerala, India',
+    href: null,
+  },
+  {
+    icon: 'fab fa-linkedin',
+    label: 'LinkedIn',
+    value: 'amal-gopakumar',
+    href: 'https://www.linkedin.com/in/amal-gopakumar/',
+  },
+  {
+    icon: 'fab fa-github',
+    label: 'GitHub',
+    value: 'Amalgopakumar',
+    href: 'https://github.com/Amalgopakumar',
+  },
+];
+
 const Contact = () => {
   return (
-    <section id="contact" className="contact-section section" style={{
-      background: 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%)',
-      position: 'relative',
-      overflow: 'hidden'
-    }}>
-
-      <div style={{
-        position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
-        background: `
-          radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
-          radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
-          radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.05) 0%, transparent 50%)
-        `,
-        backgroundSize: 'cover'
-      }} />
-
+    <section id="contact" className="contact-section section">
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-        
+
+        {/* Title */}
         <div className="row">
           <div className="col-lg-12 text-center">
-            <h2 className="section-title text-white" data-aos="fade-up" style={{
-              fontSize: '2.8rem', fontWeight: '700', marginBottom: '3.5rem'
-            }}>
+            <span className="section-label">Let's Connect</span>
+            <h2 className="section-title text-white" data-aos="fade-up">
               Get In Touch
             </h2>
-            <p className="text-center text-white mb-5" data-aos="fade-up" data-aos-delay="200" style={{
-              fontSize: '1.15rem', opacity: '0.75', lineHeight: '1.7', maxWidth: '80%', margin: '0 auto'
-            }}>
-              Whether you want to collaborate on a data project, need help with analytics,
-              or want to discuss insights and dashboards — feel free to reach out!
+          </div>
+        </div>
+
+        {/* Subtitle */}
+        <div className="row mb-5">
+          <div className="col-lg-7 mx-auto text-center" data-aos="fade-up" data-aos-delay="100">
+            <p style={{ color: 'var(--dark-muted)', fontSize: '0.97rem', lineHeight: 1.85 }}>
+              Whether you want to collaborate on a data project, discuss analytics,
+              or explore internship and full-time opportunities — I'd love to hear from you.
             </p>
           </div>
         </div>
 
+        {/* Contact cards */}
         <div className="row">
-          <div className="col-lg-8 mx-auto">
-            <div className="contact-info" data-aos="fade-up" data-aos-delay="400">
-              <div className="row">
-
-                {/* Email */}
-                <div className="col-md-6 mb-4">
-                  <div className="contact-item" style={cardStyle}>
-                    <i className="fas fa-envelope" style={iconStyle}></i>
-                    <div>
-                      <h5 style={titleStyle}>Email</h5>
-                      <p style={textStyle}>amalgopakumar5@gmail.com</p>
-                    </div>
+          <div className="col-lg-7 mx-auto" data-aos="fade-up" data-aos-delay="200">
+            {contactItems.map((item, i) => (
+              item.href ? (
+                <a
+                  key={i}
+                  href={item.href}
+                  target={item.href.startsWith('http') ? '_blank' : undefined}
+                  rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  className="contact-item text-decoration-none"
+                >
+                  <i className={item.icon}></i>
+                  <div>
+                    <h5>{item.label}</h5>
+                    <p>{item.value}</p>
+                  </div>
+                  <i className="fas fa-arrow-right ms-auto" style={{ color: 'var(--dark-border)', fontSize: '0.8rem' }}></i>
+                </a>
+              ) : (
+                <div key={i} className="contact-item">
+                  <i className={item.icon}></i>
+                  <div>
+                    <h5>{item.label}</h5>
+                    <p>{item.value}</p>
                   </div>
                 </div>
-
-                {/* Phone */}
-                <div className="col-md-6 mb-4">
-                  <div className="contact-item" style={cardStyle}>
-                    <i className="fas fa-phone" style={iconStyle}></i>
-                    <div>
-                      <h5 style={titleStyle}>Phone</h5>
-                      <p style={textStyle}>+91 77368 99481</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Location */}
-                <div className="col-md-6 mb-4">
-                  <div className="contact-item" style={cardStyle}>
-                    <i className="fas fa-map-marker-alt" style={iconStyle}></i>
-                    <div>
-                      <h5 style={titleStyle}>Location</h5>
-                      <p style={textStyle}>Palakkad, Kerala, India</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* LinkedIn */}
-                <div className="col-md-6 mb-4">
-                  <div className="contact-item" style={cardStyle}>
-                    <i className="fab fa-linkedin" style={iconStyle}></i>
-                    <div>
-                      <h5 style={titleStyle}>LinkedIn</h5>
-                      <p style={textStyle}>
-                        https://www.linkedin.com/in/amal-gopakumar/
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
+              )
+            ))}
           </div>
         </div>
 
-        {/* CTA */}
+        {/* CTA buttons */}
         <div className="row mt-5">
-          <div className="col-lg-12 text-center" data-aos="fade-up" data-aos-delay="600">
-            <h4 className="mb-4 text-white" style={{ fontSize: '2rem', fontWeight: '700' }}>
-              Let's Work Together
+          <div className="col-lg-12 text-center" data-aos="fade-up" data-aos-delay="350">
+            <h4
+              className="mb-3 text-white"
+              style={{ fontFamily: 'var(--font-display)', fontWeight: 700, letterSpacing: '-0.02em' }}
+            >
+              Open to Opportunities
             </h4>
-            <p className="mb-4" style={{
-              color: 'rgba(255, 255, 255, 0.75)', fontSize: '1.1rem', lineHeight: '1.7',
-              maxWidth: '70%', margin: '0 auto'
-            }}>
-              I'm always open to internships, freelance projects, full-time roles, and collaborations
-              in data analytics, dashboard building, and business insights.
+            <p className="mb-4" style={{ color: 'var(--dark-muted)', fontSize: '0.9rem' }}>
+              Internships · Freelance Projects · Full-time Roles · Collaborations
             </p>
 
-            <div className="contact-buttons">
-
-              {/* Email Button */}
-              <a href="mailto:amalgopakumar5@gmail.com" className="btn btn-lg me-3 mb-3"
-                style={primaryBtnStyle}>
-                <i className="fas fa-envelope me-2"></i> Send Email
+            <div className="d-flex flex-wrap justify-content-center gap-3">
+              <a href="mailto:amalgopakumar5@gmail.com" className="btn btn-primary btn-lg">
+                <i className="fas fa-envelope me-2"></i>Send Email
               </a>
-
-              {/* LinkedIn Button */}
-              <a href="https://www.linkedin.com/in/amal-gopakumar/" target="_blank"
-                rel="noopener noreferrer" className="btn btn-lg mb-3" style={outlineBtnStyle}>
-                <i className="fab fa-linkedin me-2"></i> Connect on LinkedIn
+              <a
+                href="https://www.linkedin.com/in/amal-gopakumar/"
+                target="_blank" rel="noopener noreferrer"
+                className="btn btn-outline-light btn-lg"
+              >
+                <i className="fab fa-linkedin me-2"></i>LinkedIn
               </a>
-
+              <a
+                href="https://github.com/Amalgopakumar"
+                target="_blank" rel="noopener noreferrer"
+                className="btn btn-outline-light btn-lg"
+              >
+                <i className="fab fa-github me-2"></i>GitHub
+              </a>
             </div>
           </div>
         </div>
 
         {/* Footer */}
-        <div className="row mt-5">
-          <div className="col-lg-12 text-center" data-aos="fade-up" data-aos-delay="800">
-            <p style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: '0.9rem', margin: 0 }}>
-              © 2025 Portfolio. Built with React & Bootstrap.
+        <div className="row mt-5 pt-3" style={{ borderTop: '1px solid var(--dark-border)' }}>
+          <div className="col-lg-12 text-center">
+            <p style={{ color: 'var(--dark-muted)', fontSize: '0.82rem', margin: 0 }}>
+              © 2025 Amal Gopakumar · Built with React &amp; Bootstrap
             </p>
           </div>
         </div>
@@ -136,32 +137,6 @@ const Contact = () => {
       </div>
     </section>
   );
-};
-
-/* Styling Shorthands */
-const cardStyle = {
-  background: 'rgba(120, 119, 198, 0.15)',
-  border: '1px solid rgba(120, 119, 198, 0.3)',
-  borderRadius: '15px',
-  padding: '1.5rem',
-  backdropFilter: 'blur(10px)',
-};
-const iconStyle = { fontSize: '1.5rem', color: '#7877c6', marginRight: '1rem' };
-const titleStyle = { marginBottom: '0.5rem', color: '#fff', fontWeight: '600' };
-const textStyle = { margin: 0, color: 'rgba(255, 255, 255, 0.8)', fontSize: '0.95rem' };
-const primaryBtnStyle = {
-  background: 'linear-gradient(135deg, #7877c6 0%, #4a4a4a 100%)',
-  color: '#fff',
-  padding: '14px 32px',
-  borderRadius: '12px',
-  fontWeight: 600
-};
-const outlineBtnStyle = {
-  border: '2px solid rgba(255, 255, 255, 0.3)',
-  color: '#fff',
-  padding: '12px 30px',
-  borderRadius: '12px',
-  fontWeight: 600
 };
 
 export default Contact;

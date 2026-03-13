@@ -14,9 +14,10 @@ import 'aos/dist/aos.css';
 function App() {
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 700,
       once: true,
-      offset: 100
+      offset: 80,
+      easing: 'ease-out-cubic',
     });
   }, []);
 
