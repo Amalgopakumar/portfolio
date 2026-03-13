@@ -106,7 +106,7 @@ const Projects = () => {
 
                   <div className="project-links mb-3">
                     <div className="d-flex gap-2">
-                      <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="bbg-black text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-gray-900 transition"
+                      <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="bg-[#7c6aff] text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-[#6a58ee] transition"
                         style={{
                             border: "1.5px solid rgba(255,255,255,0.3)",
                             background: "rgba(120,119,198,0.12)",
